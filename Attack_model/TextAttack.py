@@ -8,6 +8,8 @@ from textattack.attack_recipes.bert_attack_li_2020 import BERTAttackLi2020
 from textattack.attack_recipes import PWWSRen2019
 from textattack.attack_recipes.bae_garg_2019 import BAEGarg2019
 from textattack.attack_recipes.textfooler_jin_2019 import TextFoolerJin2019
+from textattack.attack_recipes.textbugger_li_2018 import TextBuggerLi2018
+
 from textattack import Attacker
 from transformers import AutoTokenizer
 import datetime  
@@ -65,6 +67,8 @@ def attack_model(model,dataset_for_attack,pretrained_weights,max_len,model_name,
     attack= BAEGarg2019.build(model_wrapper)
   elif attack_recipe=='TextFoolerJin2019':
     attack= TextFoolerJin2019.build(model_wrapper)
+  elif attack_recipe=='TextBuggerLi2018':
+    attack=TextBuggerLi2018.build(model_wrapper)
   else: 
     print('Either model name is incorrect or wrong model is called .\n Allowed model are [PWWSRen2019, BERTAttackLi2020,BAEGarg2019,TextFoolerJin2019]')
   attack_args = textattack.AttackArgs (
