@@ -9,6 +9,7 @@ def bert_model(pretrained_weights,max_len,learning_rate):
   INPUT:
   pretrained_weights: Language model pretrained weights
   max_len: input length '''
+  print('Model selected:', pretrained_weights)
   bert=TFAutoModel.from_pretrained(pretrained_weights)
   
   # This is must if you would like to train the layers of language models too.
