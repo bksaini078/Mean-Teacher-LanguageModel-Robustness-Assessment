@@ -13,8 +13,9 @@ import tensorflow as tf
 - Evaluation 
 - Augmentation Evaluation
 '''
-def label_to_int(row):
-    if row=='real':
+def label_to_int(row,class_1):
+    
+    if row==class_1:
         return 0
     else:
         return 1
