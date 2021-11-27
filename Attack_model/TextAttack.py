@@ -23,7 +23,7 @@ import tensorflow as tf
 
 
 
-def attack_model(model,dataset_for_attack,pretrained_weights,max_len,model_name,attack_recipe='TextFoolerJin2019',query_budget=200, num_examples=100):
+def attack_model(model,dataset_for_attack,dataset_name,pretrained_weights,max_len,model_name,attack_recipe='TextFoolerJin2019',query_budget=200, num_examples=100):
   ''' 
   Functions to attack the model
   Inputs:
@@ -92,7 +92,7 @@ def attack_model(model,dataset_for_attack,pretrained_weights,max_len,model_name,
     print('Either model name is incorrect or wrong model is called .\n Allowed model are [PWWSRen2019, BERTAttackLi2020,BAEGarg2019,TextFoolerJin2019]')
   attack_args = textattack.AttackArgs (
     num_examples=num_examples,
-    log_to_csv=f'Result/{attack_recipe}/{model_name}_nexp{num_examples}_qb{query_budget}_{now}.csv',
+    log_to_csv=f'Result/{dataset_name}/{attack_recipe}/{model_name}_nexp{num_examples}_qb{query_budget}_{now}.csv',
     disable_stdout=False,
     query_budget=query_budget
     )
