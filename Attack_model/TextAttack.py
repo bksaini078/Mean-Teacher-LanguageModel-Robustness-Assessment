@@ -12,8 +12,8 @@ from textattack.attack_recipes.textbugger_li_2018 import TextBuggerLi2018
 from textattack.attack_recipes.clare_li_2020 import CLARE2020
 from textattack.attack_recipes.morpheus_tan_2020 import MorpheusTan2020
 from textattack.models.wrappers import HuggingFaceModelWrapper
-from textattack.attack_recipes.a2t_yoo_2021 import A2TYoo2021
-from textattack.attack_recipes.pso_zang_2020 import PSOZang2020
+# from textattack.attack_recipes.a2t_yoo_2021 import A2TYoo2021
+# from textattack.attack_recipes.pso_zang_2020 import PSOZang2020
 
 from textattack import Attacker
 from transformers import AutoTokenizer
